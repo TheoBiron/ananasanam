@@ -5,7 +5,8 @@ body {
 .footer {
     border-top: 1px solid #ccc;
     padding-top: 10px;
-    text-align: center;
+    background-color: black;
+    color: grey;
 }
 
 .articleTitle:hover, .articleTitle:focus {
@@ -15,4 +16,57 @@ body {
 .adminTable {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.navbar {
+	background-color: black;
+}
+
+.contact.glyphicon.glyphicon-envelope{
+	font-size: 50px;
+	text-decoration: none;
+}
+
+.modal-content{
+	background-color: #282828;
+	border-radius: 3px;
+}
+
+.modal-header{
+	border: none;
+	padding-top: 0;
+	color: white;
+}
+
+.modal-header .close{
+	color: white;
+	font-weight: normal;
+	opacity: 0.7;
+}
+
+.modal-header .close:hover{
+	opacity: 1;
+}
+
+.modal-footer{
+	border: none;
+	text-align: center;
+}
+
+.glyphicon.glyphicon-ok{
+	color: green;
+}
+
+.form-control.contact{
+	background-color: #cdcdcd;
+	border-radius: 3px;
+}
+
+.form-control:focus{
+	background-color: white;
+}
+
+.form-control::-webkit-input-placeholder{
+	color: black;
+	opacity: 0.5;
 }

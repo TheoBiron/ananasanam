@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c3e6bea5ad3a81cb86d67fad43edc648",
+    "hash": "2c6e4672629702ce7ae40a23348ff523",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -635,6 +635,57 @@
                 "microframework"
             ],
             "time": "2015-09-15 06:53:42"
+        },
+        {
+            "name": "swiftmailer/swiftmailer",
+            "version": "v4.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "28ac862c8d5ccbe5c7ee8cecc07e1ca9d5195b56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/28ac862c8d5ccbe5c7ee8cecc07e1ca9d5195b56",
+                "reference": "28ac862c8d5ccbe5c7ee8cecc07e1ca9d5195b56",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Chris Corbyn"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.org",
+            "keywords": [
+                "mail",
+                "mailer"
+            ],
+            "time": "2012-06-17 20:55:34"
         },
         {
             "name": "symfony/config",

@@ -10,6 +10,7 @@ ExceptionHandler::register();
 // Register service providers
 $app->register(new Silex\Provider\FormServiceProvider());
 $app->register(new Silex\Provider\TranslationServiceProvider());
+$app->register(new Silex\Provider\SwiftmailerServiceProvider());
 $app->register(new Silex\Provider\DoctrineServiceProvider());
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../views',
@@ -27,24 +28,11 @@ $app->register(new Silex\Provider\SecurityServiceProvider(), array(
             'pattern' => '^/',
             'anonymous' => true,
             'logout' => true,
-            'form' => array('login_path' => '/login', 'check_path' => '/login_check'),
-            'users' => $app->share(function () use ($app) {
-                return new ananasanam\DAO\UserDAO($app['db']);
-            }),
-        ),
-    ),
-    'security.role_hierarchy' => array(
-    	'ROLE_ADMIN' => array('ROLE_USER'),
-    ),
-    'security.acces_rules' => array(
-    	array('^/admin', 'ROLE_ADMIN'),
-    ),
-));
+            'form' => array('login_path' => '/login', 'check_path' => '/login_check')
+))));
 
 // Register services
-$app['dao.article'] = $app->share(function ($app) {
-    return new ananasanam\DAO\ArticleDAO($app['db']);
-});
-$app['dao.user'] = $app->share(function ($app) {
-    return new ananasanam\DAO\UserDAO($app['db']);
+
+$app['dao.contact'] = $app->share(function ($app) {
+    return new ananasanam\DAO\ContactDAO($app['db']);
 });
